@@ -1,0 +1,2 @@
+#Remove user profile using CIM to eradicate files, registry for local and domain users
+Get-CimInstance -ClassName Win32_userprofile -Filter "localpath Like '%<username>%'" | Remove-CimInstance
